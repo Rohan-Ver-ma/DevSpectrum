@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* body {
+} */
+
+  
+#root {
+  max-width: 100%;
+  margin: 0 4%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+    --spinner-color: #000000; /* Default color (light mode) */
+
+
+}
+.dark {
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
+  color: white;
+  --spinner-color: #ffffff; /* Dark mode color */
+
+}
+
+
+
+
+
+
+
