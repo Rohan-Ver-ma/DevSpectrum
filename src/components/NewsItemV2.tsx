@@ -1,7 +1,7 @@
 import React from "react";
 
   
-interface NewsItemProps {
+interface NewsItemProps2 {
   title: string;
   description: string;
   imageUrl: string;
@@ -11,7 +11,7 @@ interface NewsItemProps {
   };
 
 
-const NewsItemV2: React.FC<NewsItemProps> = (props) => {
+const NewsItemV2: React.FC<NewsItemProps2> = (props) => {
   const { title, description, imageUrl, url, date, source } = props;
   return (
     <>
@@ -37,7 +37,7 @@ const NewsItemV2: React.FC<NewsItemProps> = (props) => {
               </h1>
               <p className="leading-relaxed mb-3 dark:text-neutral-50">{description}</p>
               <p className="leading-relaxed mb-3 dark:text-neutral-50">
-                By  on {new Date(date).toUTCString()}
+              Published on {new Date(date).toUTCString()}
               </p>
               <div className="flex items-center flex-wrap ">
                 <a

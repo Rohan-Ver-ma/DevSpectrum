@@ -10,7 +10,7 @@ const Spinner = () => {
 
     return (
       <div>
-         <div className='flex justify-center dark:to-white' >
+         <div className=' flex justify-center it dark:to-white' >
 
        <ScaleLoader
         color={"#9ca3af"}

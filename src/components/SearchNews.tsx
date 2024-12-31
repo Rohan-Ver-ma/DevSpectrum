@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import NewsItem from "./NewsItem";
+import NewsItemV2 from "./NewsItemV2";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Spinner from "./Spinner";
 
@@ -14,27 +14,28 @@ interface News {
 }
 
 interface NewsProps {
-  category: string;
-  keywords?: string;
+  category?: string;
+  keywords: string;
   pageSize: number;
+
 }
 
 const News: React.FC<NewsProps> = (props) => {
   const [news, setNews] = useState<News[]>([]);
   const [page, setPage] = useState(1);
 
-  document.title = `Devspectrum - ${props.category}`;
-
   const apiKey = import.meta.env.VITE_API_KEY; // Access the Vite environment variable
+  document.title = `Devspectrum - ${props.keywords}`;
 
   const updateNews = async () => {
     const url =
-      "https://api.currentsapi.services/v1/latest-news?" +
+      "https://api.currentsapi.services/v1/search?" +
       `language=en&page_size=${props.pageSize}&page_number=${page}&keywords=${props.keywords}&category=${props.category}&` +
       `apiKey=${apiKey}`;
     try {
-      const res = await fetch(url);
+      const res = await fetch(url );
       const passedData = await res.json();
+      console.log(passedData)
 
       if (passedData.news) {
         setNews(passedData.news);
@@ -46,16 +47,16 @@ const News: React.FC<NewsProps> = (props) => {
 
   const fetchMoreData = async () => {
     const url =
-      "https://api.currentsapi.services/v1/latest-news?" +
-      `language=en&page_size=${props.pageSize}&page_number=${page + 1}&category=${props.category}&` +
+      "https://api.currentsapi.services/v1/search?" +
+      `language=en&page_size=${props.pageSize}&page_number=${page + 1}&keywords=${props.keywords}&category=${props.category}&` +
       `apiKey=${apiKey}`;
     try {
       const res = await fetch(url);
       const passedData = await res.json();
 
       if (passedData.news && passedData.news.length > 0) {
-        setPage(page + 1);
-        setNews((prevNews) => [...prevNews, ...passedData.news]);
+        setPage(page + 1); // Increment the page number
+        setNews((prevNews) => [...prevNews, ...passedData.news]); // Append new articles to the existing ones
       } else {
         console.log("No more data to fetch");
       }
@@ -72,18 +73,21 @@ const News: React.FC<NewsProps> = (props) => {
     <InfiniteScroll
       dataLength={news.length}
       next={fetchMoreData}
-      hasMore={news.length % 9 === 0} // Change logic if needed
+      hasMore={news.length % 9 === 0}  // Continue fetching if the current list is divisible by 9
       loader={<Spinner />}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 dark:bg-neutral-950">
         {news
         .filter((e) => e.image && e.image !== "None") // Exclude items without an image or with "None" as the value
         .map((e) => (
-          <NewsItem
+          <NewsItemV2
             key={e.url}
             title={e.title ? e.title.slice(0, 83) : "Unknown"}
             description={e.description ? e.description.slice(0, 88) : "Unknown"}
-            imageUrl={e.image || "defaultImageUrl"}
+            imageUrl={
+              e.image ||
+              "https://plus.unsplash.com/premium_photo-1732736768075-4738ba4ccf1a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
             url={e.url}
             source={e.author}
             date={e.published}
