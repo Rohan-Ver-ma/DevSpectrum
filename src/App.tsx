@@ -6,6 +6,7 @@ import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/theme-provider";
 import SearchNews from "./components/SearchNews";
+import Crypto from "./components/Crypto";
 
 function App() {
   const pageSize = 9;
@@ -28,7 +29,7 @@ function App() {
             <Route path="/programming" element={<News pageSize={pageSize} key="finance" category="programming"/>}/>
             <Route path="/lifestyle" element={<News pageSize={pageSize} key="lifestyle" category="lifestyle"/>}/>
             
-            <Route path="/crypto-web3" element={<SearchNews pageSize={pageSize} key="crypto-web3" keywords="Crypto" />}/>
+            <Route path="/crypto-web3" element={<> <Crypto/> <SearchNews pageSize={pageSize} key="crypto-web3" keywords="Crypto"  /> </>}/>
             <Route path="/artificial-intelligence" element={<SearchNews pageSize={pageSize} key="anime" keywords="LLM" />}/>
 
           </Routes>

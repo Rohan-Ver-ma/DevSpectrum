@@ -5,10 +5,22 @@
 @tailwind utilities;
 
 /* ... */
-
 @layer base {
   :root {
     --radius: 0.5rem;
     
   }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 10s linear infinite;
 }
