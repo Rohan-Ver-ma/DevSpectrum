@@ -22,8 +22,12 @@ interface NewsProps {
 const News: React.FC<NewsProps> = (props) => {
   const [news, setNews] = useState<News[]>([]);
   const [page, setPage] = useState(1);
+  
+  const capitalizeFirstLetter = (string:any) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
-  document.title = `Devspectrum - ${props.category}`;
+  document.title = `Devspectrum - ${capitalizeFirstLetter(props.category)}`;
 
   const apiKey = import.meta.env.VITE_API_KEY; // Access the Vite environment variable
 

@@ -24,8 +24,14 @@ const News: React.FC<NewsProps> = (props) => {
   const [news, setNews] = useState<News[]>([]);
   const [page, setPage] = useState(1);
 
+  const capitalizeFirstLetter = (string:any) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+  
+
   const apiKey = import.meta.env.VITE_API_KEY; // Access the Vite environment variable
-  document.title = `Devspectrum - ${props.keywords}`;
+
+  document.title = `Devspectrum - ${capitalizeFirstLetter(props.keywords)}`;
 
   const updateNews = async () => {
     const url =
@@ -35,7 +41,6 @@ const News: React.FC<NewsProps> = (props) => {
     try {
       const res = await fetch(url );
       const passedData = await res.json();
-      console.log(passedData)
 
       if (passedData.news) {
         setNews(passedData.news);
@@ -82,7 +87,7 @@ const News: React.FC<NewsProps> = (props) => {
         .map((e) => (
           <NewsItemV2
             key={e.url}
-            title={e.title ? e.title.slice(0, 83) : "Unknown"}
+            title={e.title ? e.title.slice(0, 80) : "Unknown"}
             description={e.description ? e.description.slice(0, 88) : "Unknown"}
             imageUrl={
               e.image ||

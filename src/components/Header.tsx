@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <>
-      <section className="text-gray-600 dark:text-neutral-50 dark:bg-neutral-950 body-font mb-2">
+      <section className="text-gray-600 dark:text-neutral-50 dark:bg-neutral-950 body-font mb-2 ">
         <div className="container px-5 mx-auto">
           <div className="flex flex-row">
             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-4">
@@ -17,7 +17,7 @@ export default function Header() {
               </h1>
             </div>
           </div>
-          <div className="flex flex-row justify-start gap-5">
+          <div className="flex flex-row justify-start gap-5 overflow-x-auto ">
             <Link to="/">
               <Button
                 className={`${

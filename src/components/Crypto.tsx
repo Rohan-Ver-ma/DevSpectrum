@@ -21,7 +21,6 @@ export default function Crypto() {
     try {
       const res = await fetch(url);
       const passedData = await res.json();
-      console.log(passedData);
 
       if (passedData) {
         setCrypto(passedData);
