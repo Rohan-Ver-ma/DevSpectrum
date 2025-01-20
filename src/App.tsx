@@ -9,7 +9,7 @@ import SearchNews from "./components/SearchNews";
 import Crypto from "./components/Crypto";
 
 function App() {
-  const pageSize = 9;
+  const pageSize = 12;
   return (
     <>
     <div className="dark:bg-neutral-950 dark:text-neutral-50"> 
@@ -22,7 +22,7 @@ function App() {
           <Routes>
 
             <Route path="/" element={<LatestNews key="general" pageSize={pageSize} category="general" />} />
-            <Route path="/business" element={  <LatestNews key="business" pageSize={pageSize} category="business" /> } />
+            <Route path="/business" element={ <LatestNews key="business" pageSize={pageSize} category="business" /> } />
             <Route path="/health" element={<LatestNews key="health" pageSize={pageSize} category="health" />}/>
             <Route path="/entertainment" element={<LatestNews key="entertainment" pageSize={pageSize} category="entertainment" />}/>
             <Route path="/finance" element={<LatestNews pageSize={pageSize} key="finance" category="finance"/>}/>

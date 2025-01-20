@@ -16,20 +16,20 @@ const NewsItemV2: React.FC<NewsItemProps2> = (props) => {
   return (
     <>
     <a href={url} target="_blank" rel="noreferrer">
-      <div className="flex flex-wrap dark:bg-neutral-950  ">
+      <div className="flex flex-wrap dark:bg-neutral-950 ">
         <div
-          className="  md:w-1/3"
+          className="md:w-1/3"
           style={{ transform: "scale(0.9)", flex: "1 1 auto" }}
           
         >
-          <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden dark:border-neutral-900 dark:bg-neutral-900">
+          <div className="h-full  border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden dark:border-neutral-900 dark:bg-neutral-900 hover:border-gray-200 hover:dark:border-neutral-700 shadow-sm transition duration-400 ease-in-out transform hover:-translate-y-1 hover:scale-105">
             <img
               className="lg:h-48 md:h-36 w-full object-cover object-center"
               src={imageUrl}
               alt="blog"
             />
             <div className="p-6">
-              <h2 className="tracking-widest text-xs title-font font-bold text-gray-600 mb-1 dark:text-neutral-50">
+              <h2 className="tracking-widest text-sm title-font font-bold text-gray-600 mb-1 dark:text-neutral-50">
                 {source}
               </h2>
               <h1 className="title-font text-lg font-medium text-gray-900 mb-3 dark:text-neutral-50">
@@ -37,13 +37,13 @@ const NewsItemV2: React.FC<NewsItemProps2> = (props) => {
               </h1>
               <p className="leading-relaxed mb-3 dark:text-neutral-50">{description}</p>
               <p className="leading-relaxed mb-3 dark:text-neutral-50">
-              Published on {new Date(date).toUTCString()}
+                Published on {new Date(date).toUTCString()}
               </p>
               <div className="flex items-center flex-wrap ">
                 <a
                   href={url}
                   target="_blank"
-                  className="text-neutral-950 cursor-pointer inline-flex items-center md:mb-2 lg:mb-0 dark:focus:bg-neutral-950 dark:focus:text-neutral-50"
+                  className="text-neutral-950 dark:text-neutral-300 cursor-pointer inline-flex items-center md:mb-2 lg:mb-0 dark:focus:bg-neutral-950 dark:focus:text-neutral-50"
                 >
                   Learn More
                   <svg

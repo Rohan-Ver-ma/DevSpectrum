@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
 import InfiniteScroll from "react-infinite-scroll-component";
-import Spinner from "./Spinner";
+import Skeleton from "./ui/Skeleton";
 
 interface News {
   url: string;
@@ -76,8 +76,8 @@ const News: React.FC<NewsProps> = (props) => {
     <InfiniteScroll
       dataLength={news.length}
       next={fetchMoreData}
-      hasMore={news.length % 9 === 0} // Change logic if needed
-      loader={<Spinner />}
+      hasMore={news.length % 12 === 0} // Change logic if needed
+      loader={<Skeleton />}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 dark:bg-neutral-950">
         {news
