@@ -12,7 +12,10 @@ module.exports = {
   		colors: {},
 	fontFamily: {
   			inter: ['Inter', 'serif'],
-  		},									
+  		},	
+		  animation: {
+			pulse: 'pulse 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+		  }									
   	}
   },
   plugins: [require("tailwindcss-animate")],
