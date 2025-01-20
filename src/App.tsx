@@ -30,7 +30,7 @@ function App() {
             <Route path="/lifestyle" element={<LatestNews pageSize={pageSize} key="lifestyle" category="lifestyle"/>}/>
             
             <Route path="/crypto-web3" element={<> <Crypto/> <SearchNews pageSize={pageSize} key="crypto-web3" keywords="Crypto"  /> </>}/>
-            <Route path="/artificial-intelligence" element={<SearchNews pageSize={pageSize} key="anime" keywords="LLM" />}/>
+            <Route path="/artificial-intelligence" element={<SearchNews pageSize={pageSize} key="LLM" keywords="LLM" />}/>
 
           </Routes>
         </Router>
