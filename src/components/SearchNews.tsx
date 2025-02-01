@@ -17,12 +17,16 @@ interface NewsProps {
   category?: string;
   keywords: string;
   pageSize: number;
+  name: string;
 
 }
 
 const News: React.FC<NewsProps> = (props) => {
   const [news, setNews] = useState<News[]>([]);
   const [page, setPage] = useState(1);
+
+  const isValidUrl = (url:string) => /^https?:\/\/\S+\.\S+$/.test(url); // Checks if URL starts with http/https
+
 
   const capitalizeFirstLetter = (string:any) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -31,7 +35,7 @@ const News: React.FC<NewsProps> = (props) => {
 
   const apiKey = import.meta.env.VITE_API_KEY; // Access the Vite environment variable
 
-  document.title = `Devspectrum - ${capitalizeFirstLetter(props.keywords)}`;
+  document.title = `Devspectrum - ${capitalizeFirstLetter(props.name)}`;
 
   const updateNews = async () => {
     const url =
@@ -83,7 +87,7 @@ const News: React.FC<NewsProps> = (props) => {
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 dark:bg-neutral-950">
         {news
-        .filter((e) => e.image && e.image !== "None") // Exclude items without an image or with "None" as the value
+        .filter((e) => e.image && e.image !== "None" && isValidUrl(e.image) && e.title && e.description && e.url) // Exclude items without an image or with "None" as the value
         .map((e) => (
           <NewsItemV2
             key={e.url}
