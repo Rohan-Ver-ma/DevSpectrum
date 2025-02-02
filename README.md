@@ -2,7 +2,7 @@
 
 A modern, developer-first news platform covering everything from open-source tools to blockchain trends. Whether you're a coder, investor, or tech enthusiast, Devspectrum has something for you.
 
-[![React.js](https://img.shields.io/badge/Next.js-15-black)](https://react.dev/)
+[![React](https://img.shields.io/badge/React-18.3-blue?logo=react&logoColor=white)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-blue)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-latest-black)](https://ui.shadcn.com/)
