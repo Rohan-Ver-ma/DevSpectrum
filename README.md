@@ -9,6 +9,8 @@ A modern, developer-first news platform covering everything from open-source too
 
 <img src="public/devspectrum-landing.png" alt="DevSpectrum landing page image" />
 
+<img src="public/devspectrum-2.png" alt="DevSpectrum landing page image" />
+
 ## 🚀 Quick Start
 
 1. Install dependencies:
