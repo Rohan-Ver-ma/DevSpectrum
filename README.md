@@ -7,7 +7,7 @@ A modern, developer-first news platform covering everything from open-source too
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-latest-black)](https://ui.shadcn.com/)
 
-<img src="" alt="Launch UI components mockups" />
+<img src="public/devspectrum-landing.png" alt="DevSpectrum landing page image" />
 
 ## 🚀 Quick Start
 
