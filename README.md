@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+#  DevSpectrum – One Stop for your Crypto Updates & Tech Trends
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, developer-first news platform covering everything from open-source tools to blockchain trends. Whether you're a coder, investor, or tech enthusiast, Devspectrum has something for you.
 
-Currently, two official plugins are available:
+[![React.js](https://img.shields.io/badge/Next.js-15-black)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-blue)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![shadcn/ui](https://img.shields.io/badge/shadcn/ui-latest-black)](https://ui.shadcn.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="" alt="Launch UI components mockups" />
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Install dependencies:
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Start the development server:
+```bash
+npm run dev
 ```
+
+3. Open [http://localhost:3000](http://localhost:3000) to view your site
+
+
+## ✨ Features
+
+- 🎨 **Modern Design System**: Built on top of shadcn/ui, offering a clean and professional look
+- 📱 **Fully Responsive**: All components work perfectly across desktop, tablet, and mobile devices
+- ⚡ **Performance Optimized**: Leverages React.js features for optimal loading speed
+- 🌗 **Dark Mode Support**: Seamless light/dark mode switching with system preference detection
+- 🎯 **SEO Optimized**: Built with best practices for search engine visibility
+
+
+## 🛠️ Tech Stack
+
+- **Framework**: [React.js](https://react.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Animations**: CSS animations and transitions
+- **Icons**: Lucide icons
+
+
+<p align="center">
+  <a href="https://devspectrum.rohanverma.me/">Website</a> 
+</p>
