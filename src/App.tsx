@@ -29,8 +29,8 @@ function App() {
             <Route path="/programming" element={<LatestNews pageSize={pageSize} key="programming" category="programming"/>}/>
             <Route path="/lifestyle" element={<LatestNews pageSize={pageSize} key="lifestyle" category="lifestyle"/>}/>
             
-            <Route path="/crypto-web3" element={<> <Crypto/> <SearchNews pageSize={pageSize} name="Crypto & Web3" key="crypto-web3" keywords="Crypto"  /> </>}/>
-            <Route path="/artificial-intelligence" element={<SearchNews pageSize={pageSize} key="LLM" name="Artificial Intelligence" keywords="LLM" />}/>
+            <Route path="/crypto-web3" element={<> <Crypto/> <SearchNews pageSize={pageSize} name="Crypto & Web3" key="crypto-web3" keywords="Web3"  /> </>}/>
+            <Route path="/artificial-intelligence" element={<SearchNews pageSize={pageSize} key="LLM" name="Artificial Intelligence" keywords="chatGPT" />}/>
 
           </Routes>
         </Router>

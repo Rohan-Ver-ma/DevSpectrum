@@ -25,7 +25,7 @@ const News: React.FC<NewsProps> = (props) => {
   const [news, setNews] = useState<News[]>([]);
   const [page, setPage] = useState(1);
 
-  const isValidUrl = (url:string) => /^https?:\/\/\S+\.\S+$/.test(url); // Checks if URL starts with http/https
+  const isValidUrl = (url:string) => /^https?:\/\/\S+\.\S+$/.test(url); // Checks if URL starts with http/httpsz
 
 
   const capitalizeFirstLetter = (string:any) => {
@@ -40,7 +40,7 @@ const News: React.FC<NewsProps> = (props) => {
   const updateNews = async () => {
     const url =
       "https://api.currentsapi.services/v1/search?" +
-      `language=en&page_size=${props.pageSize}&page_number=${page}&keywords=${props.keywords}&category=${props.category}&` +
+      `language=en&page_size=${props.pageSize}&page_number=${page}&keywords=${props.keywords}&` +
       `apiKey=${apiKey}`;
     try {
       const res = await fetch(url );
@@ -57,7 +57,7 @@ const News: React.FC<NewsProps> = (props) => {
   const fetchMoreData = async () => {
     const url =
       "https://api.currentsapi.services/v1/search?" +
-      `language=en&page_size=${props.pageSize}&page_number=${page + 1}&keywords=${props.keywords}&category=${props.category}&` +
+      `language=en&page_size=${props.pageSize}&page_number=${page + 1}&keywords=${props.keywords}&` +
       `apiKey=${apiKey}`;
     try {
       const res = await fetch(url);
