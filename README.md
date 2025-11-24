@@ -46,5 +46,5 @@ npm run dev
 
 
 <p align="center">
-  <a href="https://devspectrum.rohanverma.me/">Website</a> 
+  <a href="https://devspectrum.rohanverma.dev/">Website</a> 
 </p>
