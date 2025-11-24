@@ -5,7 +5,7 @@ export default function Navbar() {
     <>
       <header className="text-gray-600 dark:text-neutral-50 body-font dark:bg-neutral-950">
         <div className="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
-          <a href="https://devspectrum.rohanverma.me" className="flex title-font font-semibold items-center text-gray-900 dark:text-neutral-50 mb-4 md:mb-0">
+          <a href="https://devspectrum.rohanverma.dev" className="flex title-font font-semibold items-center text-gray-900 dark:text-neutral-50 mb-4 md:mb-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -21,7 +21,7 @@ export default function Navbar() {
             <span  className="ml-2 text-xl">DevSpectrum</span>
           </a>
           <nav className=" cursor-pointer md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l text-zinc-500 dark:text-neutral-500 md:border-gray-400 dark:md:border-neutral-50 flex flex-wrap items-center text-base justify-center font-semibold">
-            <a href="https://devspectrum.rohanverma.me" className="mr-5 hover:text-gray-900 dark:hover:text-neutral-50">Overview</a>
+            <a href="https://devspectrum.rohanverma.dev" className="mr-5 hover:text-gray-900 dark:hover:text-neutral-50">Overview</a>
             <a href="https://github.com/Rohan-Ver-ma/DevSpectrum" target="_blank" className="mr-5 hover:text-gray-900 dark:hover:text-neutral-50">Github</a>
             <a  href="https://x.com/rohans_twt" target="_blank" className="mr-5 hover:text-gray-900 dark:hover:text-neutral-50">Twitter/X</a>
           </nav>
